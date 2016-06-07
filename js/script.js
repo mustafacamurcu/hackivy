@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  logEmoji();
 
   //var window_height = $(window).height();
   //adjust section height
@@ -30,8 +29,8 @@ $(document).ready(function() {
   }
 
   $(".drake-me").click(function() {
-    var target = $("#drake-here")[0];
-    drakeMe(target);
+    //var target = $("#drake-here")[0];
+    //drakeMe(target);
     $(".section").unbind("click", loadPixelOnMouse);
     $(".section").on("click", drakeOnMouse);
     everythingDrake();
@@ -108,7 +107,7 @@ function loadPixelOnMouse(e) {
 }
 
 function loadDrake() {
-  var path = "assets/img/drake.png";
+  var path = "img/drake.png";
   var html = "<img class='drake' src='" + path + "'>";
   return $(html);
 }
@@ -125,7 +124,7 @@ function drakeOnMouse(e) {
 }
 
 function everythingDrake() {
-  $(".section:not(#footer) img").attr("src", "assets/img/drake.png");
+  $(".section:not(#footer) img").attr("src", "img/drake.png");
 }
 
 function onScroll(event) {
@@ -143,12 +142,12 @@ function onScroll(event) {
   });
 }
 
-SC.initialize({
-  // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-  // too lazy to hide this server side
-  client_id: "5bf5997727498f138cd393324936657c"
-  // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
-});
+// SC.initialize({
+//   // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+//   // too lazy to hide this server side
+//   client_id: "5bf5997727498f138cd393324936657c"
+//   // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
+// });
 
 var raining_drake = false;
 var rate_of_rain = 1000;
@@ -208,7 +207,7 @@ function Drake(starting, size, acceleration) {
 }
 
 Drake.prototype.create = function() {
-  this.img = $("<img class='spin' src='assets/img/drake.png'>")
+  this.img = $("<img class='spin' src='img/drake.png'>")
     .mouseenter(function() {
       this.turnToSix();
     }.bind(this));
@@ -261,7 +260,7 @@ Drake.prototype.shrink = function() {
 }
 
 Drake.prototype.turnToSix = function() {
-  this.img.attr("src", "assets/img/six.png")
+  this.img.attr("src", "img/six.png")
 }
 
 Drake.prototype.die = function() {
@@ -269,7 +268,7 @@ Drake.prototype.die = function() {
   this.moving = false;
 }
 
-function logSongs(options) {
+function Songs(options) {
   SC.get("/tracks", options, function(tracks) {
     tracks.map(function(track) {
       console.log(track.title, track.bpm, track);
@@ -277,20 +276,6 @@ function logSongs(options) {
   });
 }
 
-function drakeMe(target, tooLate) {
-  var link = "/tracks";
-  var search = "octobersveryown";
-  SC.get(link, {
-    q: search,
-    limit: 25
-  }, function(tracks) {
-    console.log(target);
-    var song = tracks[Math.floor((tracks.length - 1) * Math.random())];
-    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-    SC.oEmbed(song.uri, {auto_play: true}, target);
-    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
-  });
-}
 
 function loadImg(selector) {
   $(selector).each(function(index, sponsor) {
@@ -331,18 +316,3 @@ var activateSection = function(section) {
 };
 
 var poem = "%cBu site http://huskyhacks.com/ 'dan ilhamla yapilmistir.\nOnlar da zaten http://www.calhacks.io/ 'dan cokmusler. <3\n";
-
-var logEmoji = function() {
-  var styles = {
-    please: "color: #336699; font-weight: bold",
-    emoji: function() {
-      return "background-image: url('" +
-        "http://emojipedia.org/wp-content/uploads/2013/07/6-winking-face.png" +
-        "'); background-size: cover";
-    }
-  };
-  console.log(
-    poem,
-    styles.please
-  );
-};
