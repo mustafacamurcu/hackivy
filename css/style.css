@@ -45,14 +45,14 @@ html {
 
 a {
   text-decoration: none;
-  border-bottom: 2px solid rgba(245, 166, 35, 0.72);
+  border-bottom: 2px solid rgba(28, 99, 39, 0.72);
   color: inherit;
   padding: 3px;
   transition: 0.3s ease;
 }
 
 #about a:hover, #general a:hover, #FAQ a:hover, #sponsor p a:hover, #footer a:hover {
-  background-color: rgba(245, 166, 35, 1);
+  background-color: #1c6327;
   color: white
 }
 
@@ -340,13 +340,13 @@ a {
 }
 
 #nav.active .nav-section {
-  color: #F5A623;
+  color: #1c6327;
   padding-bottom: 15px;
   opacity: 0.72
 }
 
 #nav.active .nav-section.active {
-  border-bottom: 3px solid #F5A623;
+  border-bottom: 3px solid #1c6327;
   opacity: 1
 }
 
@@ -512,7 +512,7 @@ a {
 /* FAQ */
 
 #FAQ {
-  background-color: #33cc33;
+  background-color: #33a041;
   color: white
 }
 
