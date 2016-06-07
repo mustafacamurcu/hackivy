@@ -83,7 +83,7 @@ var pixels = ["ambulance.svg", "battery-half.svg", "chevron-left.svg",
 
 function randomPixel() {
   var rand = Math.floor(Math.random() * pixels.length);
-  var path = "assets/img/pixel/" + pixels[rand];
+  var path = "img/pixel/" + pixels[rand];
   var html = "<img class='pixel' src='" + path + "'>";
   return $(html);
 }
@@ -102,8 +102,8 @@ function loadPixelOnMouse(e) {
   var offset = $container.offset();
   var pixel = loadPixels(1, $container);
   pixel.css({
-    left: e.pageX - offset.left,
-    top: e.pageY - offset.top
+    left: e.pageX - offset.left - 10,
+    top: e.pageY - offset.top - 10
   });
 }
 
@@ -330,29 +330,7 @@ var activateSection = function(section) {
   $(section).addClass("active");
 };
 
-var poem = "%cCal Hacks, a poem %c\n\n" +
-
-  "%cThere once was a wee young lad,\n" +
-  "whose brain had gone all sad,\n" +
-  "for he didn't ignite his thoughts or his bytes,\n" +
-  "and now his friends laugh cause his life isn't rad.\n" +
-  "So one dark, stormy night,\n he found, to his delight,\n" +
-  "a hackathon so, extravagant, bold,\n" +
-  "that he giggled with glee as he hit apply.\n" +
-  "And now with his acceptance,\n his friends are filled with reverence,\n" +
-  "they pleaded and pleaded, for a chance to compete with,\n" +
-  "this lad in Cal Hacks and go undefeated.\n\n" +
-
-  "There once was a bored little lass,\n who wanted to try out SASS,\n" +
-  "so she hit apply and overnight,\n" +
-  "she found her life filled with delight.\n" +
-  "Now everywhere she go,\n she radiates a glow,\n" +
-  "cause she's full of ideas of uses and features,\n" +
-  "for all types of users and all types of creatures.\n\n" +
-
-  "And now for the final guest,\n a hacker with wonder and zest,\n" +
-  "who doesn't deplore a chance to explore,\n" +
-  "come join us for 2 days of hacking galore!";
+var poem = "%cBu site http://huskyhacks.com/ 'dan ilhamla yapilmistir.\nOnlar da zaten http://www.calhacks.io/ 'dan cokmusler. <3\n";
 
 var logEmoji = function() {
   var styles = {
@@ -365,6 +343,6 @@ var logEmoji = function() {
   };
   console.log(
     poem,
-    styles.please, styles.emoji(), styles.please
+    styles.please
   );
 };

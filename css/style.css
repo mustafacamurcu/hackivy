@@ -421,7 +421,7 @@ a {
   left: 0px;
   top: 0px;
  /* background: linear-gradient(90deg, rgba(36, 198, 220, 0.360784) 10%, rgba(81, 74, 157, 0.239216) 90%); */
-  background: -webkit-linear-gradient(-45deg, rgba(0,0,0,.75) 0%,rgba(173,1,4,.55) 44%,rgba(100,100,100,.55) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(0,0,0,.75) 0%,rgba(51,204,51,.55) 44%,rgba(100,100,100,.55) 100%);
   background-color: rgba(0, 23, 36, 0.74);
 }
 
@@ -512,7 +512,7 @@ a {
 /* FAQ */
 
 #FAQ {
-  background-color: #b30000;
+  background-color: #33cc33;
   color: white
 }
 
@@ -562,7 +562,7 @@ a {
 
 #apply {
   height: 600px;
-  background-color: #B30000;
+  background-color: #6FCBDC;
 }
 
 .desktop-img {
