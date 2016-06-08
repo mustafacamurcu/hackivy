@@ -15,7 +15,7 @@ $(document).ready(function() {
     $("body").backstretch("img/bg.jpg");
     $(document).on("scroll", onScroll);
     $(".section").click(loadPixelOnMouse);
-    $(".faq-card").click(function(e) {e.stopPropagation();});
+    //$(".faq-card").click(function(e) {e.stopPropagation();});
   } else {
     $("#nav").addClass("active-mobile");
     $("#logo_white").hide();
@@ -80,9 +80,14 @@ var pixels = ["ambulance.svg", "battery-half.svg", "chevron-left.svg",
   "food.svg", "hand.svg", "location.svg", "palette.svg", "question.svg",
   "ruler-triangle.svg", "stats-down.svg", "tshirt.svg"];
 
+var icons = ["android.png", "angularjs.png", "cpp.png",
+  "css3.png", "github.png", "html5.png", "html5.png",
+  "javascript.png", "nodejs.png", "python.png", "unity.png", "aws.png"];
+
+
 function randomPixel() {
-  var rand = Math.floor(Math.random() * pixels.length);
-  var path = "img/pixel/" + pixels[rand];
+  var rand = Math.floor(Math.random() * icons.length);
+  var path = "img/icons/" + icons[rand];
   var html = "<img class='pixel' src='" + path + "'>";
   return $(html);
 }
