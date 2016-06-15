@@ -123,8 +123,8 @@ function drakeOnMouse(e) {
   var drake = loadDrake();
   $container.append(drake);
   drake.css({
-    left: e.pageX - offset.left,
-    top: e.pageY - offset.top
+    left: e.pageX - offset.left - 10,
+    top: e.pageY - offset.top - 10
   });
 }
 
