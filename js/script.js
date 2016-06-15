@@ -321,3 +321,5 @@ var activateSection = function(section) {
 };
 
 var poem = "%cBu site http://huskyhacks.com/ 'dan ilhamla yapilmistir.\nOnlar da zaten http://www.calhacks.io/ 'dan cokmusler. <3\n";
+console.log("Achievement Unlocked: H4CK3R")
+console.log("http://giphy.com/gifs/hack-MGaacoiAlAti0")
